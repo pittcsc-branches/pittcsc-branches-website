@@ -1,2 +1,2 @@
-# PittCSC Branches Website
+# Pitt CSC Branches Website
 The homepage for Pitt CSC Branches!
