@@ -1,0 +1,25 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [master]
+  schedule:
+    # Rebuild daily at midnight EST
+    - cron: '0 4 * * *'
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v1
+      - name: Build and Export
+        run: |
+          yarn install --frozen-lockfile
+          yarn export
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          cname: branches.pittcsc.org
