@@ -23,4 +23,3 @@ jobs:
         with:
           commit_message: Apply Prettier formatting changes
           branch: ${{ github.head_ref }}
-          

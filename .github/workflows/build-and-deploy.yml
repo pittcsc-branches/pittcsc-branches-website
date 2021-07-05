@@ -4,7 +4,7 @@ on:
     branches: [master]
   schedule:
     # Rebuild daily at midnight EST
-    - cron: '0 4 * * *'
+    - cron: "0 4 * * *"
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
       - name: Build and Export
         run: |
           yarn install --frozen-lockfile
