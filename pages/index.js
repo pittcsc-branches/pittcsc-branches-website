@@ -13,6 +13,7 @@ export default function Home({ branches }) {
           <a
             href={branch.url}
             className="list-group-item list-group-item-action"
+            key={branch.name}
           >
             {branch.name}
             {branch.description ? `: ${branch.description}` : null}
