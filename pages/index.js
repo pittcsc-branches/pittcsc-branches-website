@@ -5,13 +5,15 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 export default function Home({ branches }) {
   return (
     <main className="container mx-auto pb-16 px-4">
+      {/* Logo */}
       <img
         src="/branches-logo.svg"
         className="mx-auto max-w-2xl"
         alt="Pitt CSC Branches"
       />
       <div className="flex flex-col justify-center space-y-8 lg:flex-row lg:gap-8 lg:space-y-0">
-        <div className="mx-auto p-8 max-w-2xl leading-loose bg-secondary-200 rounded-lg shadow-md">
+        {/* Yellow Description Block */}
+        <div className="bg-secondary-200 mx-auto p-8 max-w-2xl leading-loose rounded-lg shadow-md">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             What are branches?{" "}
             <span className="inline-block transform hover:-rotate-6 hover:scale-110 transition">
@@ -26,6 +28,7 @@ export default function Home({ branches }) {
           to focus less on monotonous paperwork and slow processes, and more on
           what matters - their community, passions, missions, and members.
         </div>
+        {/* Gray Links Block */}
         <div className="a grid justify-items-start place-content-center mx-auto p-8 max-w-xl leading-loose bg-gray-100 rounded-lg shadow-md space-y-2">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Links to sites{" "}
@@ -48,6 +51,7 @@ export default function Home({ branches }) {
           </ul>
         </div>
       </div>
+      {/* Join Discord Blurb */}
       <div className="flex items-center justify-center mt-16 text-center space-x-2">
         <p>
           Join our{" "}
@@ -61,7 +65,7 @@ export default function Home({ branches }) {
         </p>
         <a
           href="https://discord.gg/wzPeq2GCRT"
-          className="block text-primary text-4xl transform hover:scale-105 transition"
+          className="text-primary block text-4xl transform hover:scale-105 transition"
         >
           <FontAwesomeIcon icon={faDiscord} />
         </a>
