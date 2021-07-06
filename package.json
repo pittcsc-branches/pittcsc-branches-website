@@ -11,15 +11,18 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "bootstrap": "^5.0.2",
     "next": "11.0.1",
     "node-fetch": "^2.6.1",
+    "prettier-plugin-tailwind": "^2.2.12",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.2.6",
     "eslint": "7.30.0",
     "eslint-config-next": "11.0.1",
-    "prettier": "^2.3.2"
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.4"
   }
 }
