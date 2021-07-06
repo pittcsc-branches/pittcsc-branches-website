@@ -9,7 +9,7 @@ export default function Home({ branches }) {
         alt="Pitt CSC Branches"
       />
       <div className="flex flex-col items-center justify-center space-y-8 lg:flex-row lg:gap-8 lg:space-y-0">
-        <div className="bg-secondary-200 mx-auto p-8 max-w-xl leading-loose rounded-lg">
+        <div className="mx-auto p-8 max-w-xl leading-loose bg-secondary-200 rounded-lg">
           <h2 className="mb-4 text-2xl font-bold lg:text-4xl">
             What are branches?{" "}
             <span className="inline-block transform hover:-rotate-6 hover:scale-110 transition">
