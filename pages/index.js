@@ -20,13 +20,18 @@ export default function Home({ branches }) {
               🤔
             </span>
           </h2>
-          CSC Branches is CSC's initiative to further develop the SCI community
-          and foster more niche interests within. Through this program, CSC
-          members will be able to easily create and manage their own communities
-          (called "Branches") by forgoing SCI and SORC bureaucracy via CSC. This
-          allows club founders, open source projects, and small interest groups
-          to focus less on monotonous paperwork and slow processes, and more on
-          what matters - their community, passions, missions, and members.
+          <p>
+            {/* Avoid react/no-unescaped-entities
+          https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md */}
+            {`CSC Branches is CSC's initiative to further develop the SCI
+            community and foster more niche interests within. Through this
+            program, CSC members will be able to easily create and manage their
+            own communities (called "Branches") by forgoing SCI and SORC
+            bureaucracy via CSC. This allows club founders, open source
+            projects, and small interest groups to focus less on monotonous
+            paperwork and slow processes, and more on what matters - their
+            community, passions, missions, and members.`}
+          </p>
         </div>
         {/* Gray Links Block */}
         <div className="a grid justify-items-start place-content-center mx-auto p-8 max-w-xl leading-loose bg-gray-100 rounded-lg shadow-md space-y-2">
@@ -61,7 +66,9 @@ export default function Home({ branches }) {
           >
             Discord
           </a>
-          , that's where you can find them!{" "}
+          {/* Avoid react/no-unescaped-entities
+          https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md */}
+          {`, that's where you can find them!`}
         </p>
         <a
           href="https://discord.gg/wzPeq2GCRT"
