@@ -11,7 +11,7 @@ export default function Home({ branches }) {
         alt="Pitt CSC Branches"
       />
       <div className="flex flex-col justify-center space-y-8 lg:flex-row lg:gap-8 lg:space-y-0">
-        <div className="bg-secondary-200 mx-auto p-8 max-w-2xl leading-loose rounded-lg shadow-md">
+        <div className="mx-auto p-8 max-w-2xl leading-loose bg-secondary-200 rounded-lg shadow-md">
           <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             What are branches?{" "}
             <span className="inline-block transform hover:-rotate-6 hover:scale-110 transition">
@@ -61,7 +61,7 @@ export default function Home({ branches }) {
         </p>
         <a
           href="https://discord.gg/wzPeq2GCRT"
-          className="text-primary block text-4xl transform hover:scale-105 transition"
+          className="block text-primary text-4xl transform hover:scale-105 transition"
         >
           <FontAwesomeIcon icon={faDiscord} />
         </a>
