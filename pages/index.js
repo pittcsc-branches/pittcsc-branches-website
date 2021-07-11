@@ -1,19 +1,58 @@
 import fetch from "node-fetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 export default function Home({ branches }) {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const yellowBlock = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0 },
+  };
+
+  const grayBlock = {
+    hidden: { opacity: 0, x: 50 },
+    show: { opacity: 1, x: 0 },
+  };
+
   return (
-    <main className="container mx-auto pb-16 px-4">
+    <motion.main
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className="container mx-auto pb-16 px-4"
+    >
       {/* Logo */}
-      <img
+      <motion.img
+        variants={item}
         src="/branches-logo.svg"
         className="mx-auto max-w-2xl"
         alt="Pitt CSC Branches"
       />
       <div className="flex flex-col justify-center space-y-8 lg:flex-row lg:gap-8 lg:space-y-0">
         {/* Yellow Description Block */}
-        <div className="mx-auto p-8 max-w-2xl leading-loose bg-secondary-200 rounded-lg shadow-md">
+        <motion.div
+          variants={yellowBlock}
+          className="mx-auto p-8 max-w-2xl leading-loose bg-secondary-200 rounded-lg shadow-md"
+        >
           <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             What are branches?{" "}
             <span className="inline-block transform hover:-rotate-6 hover:scale-110 transition">
@@ -32,9 +71,12 @@ export default function Home({ branches }) {
             paperwork and slow processes, and more on what matters - their
             community, passions, missions, and members.`}
           </p>
-        </div>
+        </motion.div>
         {/* Gray Links Block */}
-        <div className="a grid justify-items-start place-content-center mx-auto p-8 max-w-xl leading-loose bg-gray-100 rounded-lg shadow-md space-y-2">
+        <motion.div
+          variants={grayBlock}
+          className="a grid justify-items-start place-content-center mx-auto p-8 max-w-xl leading-loose bg-gray-100 rounded-lg shadow-md space-y-2"
+        >
           <h2 className="mb-4 text-2xl font-bold md:text-3xl lg:text-4xl">
             Links to sites{" "}
             <span className="inline-block transform hover:rotate-6 hover:scale-110 transition">
@@ -54,10 +96,13 @@ export default function Home({ branches }) {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
       {/* Join Discord Blurb */}
-      <div className="flex items-center justify-center mt-16 text-center space-x-2">
+      <motion.div
+        variants={item}
+        className="flex items-center justify-center mt-16 text-center space-x-2"
+      >
         <p>
           Join our{" "}
           <a
@@ -76,8 +121,8 @@ export default function Home({ branches }) {
         >
           <FontAwesomeIcon icon={faDiscord} />
         </a>
-      </div>
-    </main>
+      </motion.div>
+    </motion.main>
   );
 }
 
